@@ -17,7 +17,7 @@ int main (int argc, char *argv[]) {
 	if (argc != 2) {
 		printf("param error!\n");
 	}
-	if (stat(argv[1], &statbuf) < 0) {
+	if (lstat(argv[1], &statbuf) < 0) {
 		printf("stat error!\n");
 	}
 	type = statbuf.st_mode;
